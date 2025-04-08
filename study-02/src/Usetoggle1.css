@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* text-align: center; */
+}
+
+.on {
+    color: black;
+}
+
+.off {
+    color: red;
+
+}
+
+.on p {
+    background-color: red;
+
+}
+
+.on .btn {
+    position: relative;
+    left: -68.5px;
+    bottom: -22.5px;
+    background-color: black;
+}
+
+.off .btn {
+    position: relative;
+    bottom: -22.5px;
+    left: -46px;
+    background-color: red;
+}
+
+.off p {
+    background-color: black;
+}
+
+.on .btn2 {
+    background-color: red;
+}
+
+.off .btn2 {
+    background-color: black;
+}
+
+.btn2 {
+    /* position: relative; */
+    padding: 8px 20px;
+    border: none;
+    border-radius: 18px;
+}
+
+.btn {
+    position: absolute;
+    /* height:40px; */
+    /* width: 5px; */
+    padding: 8px;
+    border-radius: 50%;
+    border: none;
+    /* background-color: yellow; */
+}
+
+.on .btn,
+.btn2,
+p {
+    transition: all;
+    transition-duration: 1s;
+}
+
+.off .btn,
+.btn2,
+p {
+    transition: all;
+    transition-duration: 1s;
+}
