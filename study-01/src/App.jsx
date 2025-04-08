@@ -50,10 +50,10 @@ function App() {
     //   </p> */}
       {/* <New1 /> */}
       {/* <h1>hello first code of react js</h1> */}
-      {/* <New2 /> */}
+      <New2 />
       {/* {New3} */}
 
-      <New4 para={"ngvuejgvnujenh"} paraTwo={"fvheywbdcuenuvhjvhfduwwfuewhn"} paraThree={"jajan taram maman taram"}/>
+      {/* <New4 para={"ngvuejgvnujenh"} paraTwo={"fvheywbdcuenuvhjvhfduwwfuewhn"} paraThree={"jajan taram maman taram"}/> */}
     </>
 
 
