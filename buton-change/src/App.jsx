@@ -20,7 +20,8 @@ function App() {
 
   return (
     <>
-      <Pro NmeOne='jeeten' NmeTwo='jeeten2' NmeThree='Jeeten3' NmeFour='Jeeten4' NmeFive='jrrten5' />
+      <Pr
+      o NmeOne='jeeten' NmeTwo='jeeten2' NmeThree='Jeeten3' NmeFour='Jeeten4' NmeFive='jrrten5' />
       <Button disabled={isdidsavle} />
       <button onClick={Toogle}>
         click to active and disable
