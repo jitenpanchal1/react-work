@@ -12,7 +12,8 @@ function Button() {
     return (
         <div>
             <button
-                onClick={Update}><span><Compo /></span></button>
+                onClick={Update}><span><Compo /></span>
+            </button>
         </div>
     )
 }

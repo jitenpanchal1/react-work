@@ -12,8 +12,7 @@ function App() {
       <Narvar />
       <button onClick={() => setCount((count) => count + 1)}>
         count is {count}
-      </button>
-     
+      </button>  
     </Usecontext.Provider>
   )
 }
