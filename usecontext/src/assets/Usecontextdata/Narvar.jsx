@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from './Button'
+import Usecontext from './Contaxt'
 
 function Narvar() {
+
+
     return (
-        <div>
-            i am nav
+        <>
+            <h1> i am nav</h1>
             <Button />
-        </div>
+            {/* <h3> in nav {laser}</h3> */}
+        </>
     )
 }
 

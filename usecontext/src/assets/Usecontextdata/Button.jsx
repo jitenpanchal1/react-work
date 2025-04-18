@@ -5,14 +5,11 @@ import Usecontext from './Contaxt'
 function Button() {
 
     const value = useContext(Usecontext)
-
-    let Update = () => {
-        value.setCount(value.count + 1)
-    }
+    
     return (
         <div>
             <button
-                onClick={Update}><span><Compo /></span>
+                onClick={value.Update}><span><Compo /></span>
             </button>
         </div>
     )

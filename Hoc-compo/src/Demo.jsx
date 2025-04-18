@@ -7,7 +7,8 @@ class Demo extends Component {
             <>
                 <h1>{this.props.count}</h1>
                 <button
-                    onClick={this.props.increment}>plus
+                    onClick={this.props.increment}>
+                    plus
                 </button>
                 <button
                     onClick={this.props.decrement}>

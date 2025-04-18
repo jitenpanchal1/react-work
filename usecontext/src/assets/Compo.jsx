@@ -7,11 +7,12 @@ function Compo() {
     return (
         <>
             <div>
-                i am compo {value.count}
+                <h2>  i am compo {value.count}</h2>
             </div>
             <div>
                 this is the basic usecontext example..
             </div>
+
         </>
     )
 }

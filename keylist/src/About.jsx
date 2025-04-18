@@ -9,9 +9,6 @@ export default class About extends Component {
             lists: [1, 2, 3, 4, 5]
         }
     }
-
-
-
     render() {
         let mylist = this.state.lists.map((data) => <li key={data.toString()}>{data}</li>)
 

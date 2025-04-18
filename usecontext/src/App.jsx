@@ -7,12 +7,16 @@ import Usecontext from './assets/Usecontextdata/Contaxt'
 function App() {
   const [count, setCount] = useState(0)
 
+  let Update = () => {
+    setCount(count + 1)
+  }
+
   return (
-    <Usecontext.Provider value={{ count, setCount }}>
+    <Usecontext.Provider value={{ count, setCount, Update}}>
       <Narvar />
-      <button onClick={() => setCount((count) => count + 1)}>
+      <button onClick={Update}>
         count is {count}
-      </button>  
+      </button>
     </Usecontext.Provider>
   )
 }
