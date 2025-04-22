@@ -44,13 +44,18 @@ export default function Header() {
                         <MDBCollapse navbar open={openNavRight} className='navbar-nav justify-content-end'>
                             {/* <div className='navbar-nav justify-content-end'> */}
                             <MDBNavbarNav className='mb-2 mb-lg-0'>
-                                <ul className='d-flex list-unstyled'>
-                                    <li ><Link to="/home">Home</Link></li>
-                                    <li className='ms-5'><Link to="/about">About</Link></li>
-                                    <li className='ms-5'><Link to="/contact">Contact</Link></li>
-                                    <li className='ms-5 sm-me-5'><Link to="/example">Example</Link></li>
-                                </ul>
-
+                                <MDBNavbarItem>
+                                    <Link className='mx-5' to="/">Home</Link>
+                                </MDBNavbarItem>
+                                <MDBNavbarItem>
+                                    <Link className='mx-5' to="/about">About</Link>
+                                </MDBNavbarItem>
+                                <MDBNavbarItem>
+                                    <Link className='mx-5' to="/contact">Contact</Link>
+                                </MDBNavbarItem>
+                                <MDBNavbarItem>
+                                    <Link className='ms-5' to="/example">Example</Link>
+                                </MDBNavbarItem>
                             </MDBNavbarNav>
                             {/* </div> */}
                         </MDBCollapse>
