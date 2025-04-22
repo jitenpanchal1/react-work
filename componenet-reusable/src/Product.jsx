@@ -22,7 +22,8 @@ function Product() {
                         <div className='col-12 col-sm-6 col-md-4 col-lg-4 mb-5'>
                             <Productsproto img={Pickone} />
                         </div>
-                        <div className='col-12  col-sm-6 col-md-4 col-lg-4 mb-5'>
+                        <div className='col-12 
+                         col-sm-6 col-md-4 col-lg-4 mb-5'>
                             <Productsproto img={Picktwo} />
                         </div>
                         <div className='col-12  col-sm-8  col-md-4 col-lg-4 mx-auto mb-5' >
