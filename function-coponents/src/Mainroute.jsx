@@ -12,7 +12,7 @@ const Mainroute = createBrowserRouter(
             path: "/",
             element:
                 <>
-                    <Header />
+                    <Header/>
                     <Home />
                 </>
         }, {
