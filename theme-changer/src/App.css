@@ -1,0 +1,15 @@
+.light {
+    background-color: rgb(152, 95, 95);
+    color: rgb(93, 152, 152);
+}
+
+.dark {
+    background-color: rgb(93, 152, 152);
+    color: rgb(152, 95, 95);
+}
+
+.ui {
+    width: 100%;
+    height: 100vh;
+    /* border: 2px solid pink; */
+}

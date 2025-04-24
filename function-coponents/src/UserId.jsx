@@ -2,7 +2,7 @@ import React from 'react'
 import Hoccompo from './Hoccompo'
 import './App.css'
 
-import { MDBTable, MDBTableBody } from 'mdb-react-ui-kit'
+import { MDBTable, MDBTableBody, MDBTableHead } from 'mdb-react-ui-kit'
 
 function UserId({ err, loading, data }) {
 
@@ -14,6 +14,14 @@ function UserId({ err, loading, data }) {
     return (
         <>
             <MDBTable bordered="2" className='rrr' align='center' >
+                <MDBTableHead>
+                    <tr>
+                        <th className='text-center fw-bolder fs-4'>User id</th>
+                        <th className='text-center fw-bolder fs-4'>User Id</th>
+                        <th className='text-center fw-bolder fs-4'>User title</th>
+                        <th className='text-center fw-bolder fs-4'>User status</th>
+                    </tr>
+                </MDBTableHead>
                 {data.map((use) => {
                     return (
                         <>
