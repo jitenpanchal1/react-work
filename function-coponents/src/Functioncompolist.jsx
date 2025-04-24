@@ -6,7 +6,7 @@ export default function Functioncompolist() {
         <>
             <div className='container'>
                 <h1><Link to="usestate">First HOOk - Usestate</Link></h1>
-                <h1><Link to="userid">user detail</Link></h1>
+                <h1><Link to="userid">user detail using useeffect</Link></h1>
                 <Outlet />
             </div >
 

@@ -3,6 +3,8 @@ import { Link } from 'react-router'
 import { useState } from 'react';
 import $ from 'jquery';
 
+
+
 import {
     MDBNavbar,
     MDBContainer,
@@ -31,6 +33,7 @@ export default function Header() {
         $(link).addClass("ttt")
     }
 
+
     return (
         <>
             <div className='container'>
@@ -49,22 +52,20 @@ export default function Header() {
                         </MDBNavbarToggler>
 
                         <MDBCollapse navbar open={openNavRight} className='navbar-nav justify-content-end'>
-                            {/* <div className='navbar-nav justify-content-end'> */}
                             <MDBNavbarNav className='mb-2  mb-lg-0 text-center'>
-                                <MDBNavbarItem>
-                                    <Link id='home' className='mx-5 nav-link ' onClick={() => change("#home")} to="/">Home</Link>
+                                <MDBNavbarItem  >
+                                    <Link id='home' className='mx-5  nav-link ' onClick={() => change("#home")} to="/">Home</Link>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem>
-                                    <Link id='about' className='mx-5 nav-link ' onClick={() => change("#about")} to="/about">About</Link>
+                                    <Link id='about' className='mx-5   nav-link' onClick={() => change("#about")} to="/about">About</Link>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem>
-                                    <Link id='contact' className='mx-5 nav-link ' onClick={() => change("#contact")} to="/contact">Contact</Link>
+                                    <Link id='contact' className='mx-5  nav-link' onClick={() => change("#contact")} to="/contact">Contact</Link>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem>
-                                    <Link id='example' className='mx-5 nav-link' onClick={() => change("#example")} to="/example">Example</Link>
+                                    <Link id='example' className='mx-5   nav-link' onClick={() => change("#example")} to="/example">Example</Link>
                                 </MDBNavbarItem>
                             </MDBNavbarNav>
-                            {/* </div> */}
                         </MDBCollapse>
                     </MDBContainer>
                 </MDBNavbar>
