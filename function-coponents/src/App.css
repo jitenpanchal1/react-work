@@ -8,3 +8,20 @@
   background-color: aquamarine;
 }
 
+/* .close {
+  color: black;
+}
+
+.close:hover {
+  color: black;
+} */
+
+.light {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}

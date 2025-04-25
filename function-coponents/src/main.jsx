@@ -12,5 +12,4 @@ createRoot(document.getElementById('root')).render(
       router={Mainroute}>
     </RouterProvider>
   </StrictMode>
-
 )
