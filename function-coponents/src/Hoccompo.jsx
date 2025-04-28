@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 const Hoccompo = (User) => {
 
     return function fetching() {
+        console.log("hi i am hoc here")
 
         const [data, setdata] = useState(null)
         const [err, seterr] = useState(null)

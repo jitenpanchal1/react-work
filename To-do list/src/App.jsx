@@ -1,7 +1,6 @@
 import { useState } from 'react'
 
-import 'mdb-react-ui-kit/dist/css/mdb.min.css';
-import "@fortawesome/fontawesome-free/css/all.min.css";
+
 
 
 function App() {
@@ -41,8 +40,8 @@ function App() {
 
   return (
     <>
-      <div className=''>
-        <div className='d-flex flex-column justify-content-center align-items-center'>
+      <div className='text-center'>
+        <div className=''>
           <div>
             <input
               type="text"

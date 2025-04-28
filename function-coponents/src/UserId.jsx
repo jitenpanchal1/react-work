@@ -34,17 +34,6 @@ function UserId({ err, loading, data }) {
                                     <td className='text-center'>{use.completed.toString()}</td>
                                 </tr>
                             </MDBTableBody>
-
-
-                            {/* <table className='rrr' width="80%">
-                                    <tr>
-                                        <td className='rrr'> {use.id}</td>
-                                        <td className='rrr'> {use.userId}</td>
-                                        <td className='rrr'> {use.title}</td>
-                                        <td className='text-center'>{use.completed.toString()}</td>
-                                    </tr>
-                                </table> */}
-
                         </>
                     )
                 })}
@@ -53,5 +42,4 @@ function UserId({ err, loading, data }) {
         </>
     )
 }
-
 export default Hoccompo(UserId)
