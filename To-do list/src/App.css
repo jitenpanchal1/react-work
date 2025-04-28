@@ -1,0 +1,27 @@
+.box {
+    width: 490px;
+    height: 500px;
+    border: 2px solid black;
+    padding: 20px 20px 0 20px;
+    margin: 99px auto;
+    overflow-y: scroll;
+}
+
+.pst{
+   position:sticky;
+   top: 4px;
+   z-index: 2;
+}
+
+input {
+    outline: none;
+    text-align: center;
+}
+
+.addbtn {
+    padding: 5px 0;
+}
+
+.storinfo{
+    background-color: aquamarine;
+}

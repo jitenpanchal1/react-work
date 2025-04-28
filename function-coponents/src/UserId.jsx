@@ -10,7 +10,6 @@ function UserId({ err, loading, data }) {
     if (!data) return <h1 className='text-center'>Data Not find</h1>
     if (err) return <h1 className='text-center'>msg: {err}</h1>
 
-
     return (
         <>
             <MDBTable bordered="2" className='rrr' align='center' >

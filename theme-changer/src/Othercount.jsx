@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import Context from './Contextcompo'
 import Contact from './contaxr'
 
 export default function Othercount() {
