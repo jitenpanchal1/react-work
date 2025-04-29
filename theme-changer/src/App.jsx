@@ -22,7 +22,6 @@ function App() {
 
 
       <div>
-
         <div
           className={`ui ${color}`}>
           <h1>dfhwfwtgdyqgug</h1>
@@ -30,9 +29,6 @@ function App() {
             <Othercount />
           </div>
         </div>
-
-
-
       </div>
     </>
   )

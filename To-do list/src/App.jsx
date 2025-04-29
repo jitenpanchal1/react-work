@@ -9,26 +9,28 @@ function App() {
   const [multitask, setmultitask] = useState([])
 
   useEffect(() => {
-    const store = localStorage.getItem("multitask");
+    const store = localStorage.getItem("multi");
     if (store) {
       setmultitask(JSON.parse(store))
     }
   }, [])
 
   useEffect(() => {
-    localStorage.setItem("multitask", JSON.stringify(multitask));
+    localStorage.setItem("multi", JSON.stringify(multitask));
   }, [multitask])
 
   const handleAdd = () => {
     if (task.trim()) {
       setmultitask([...multitask, { text: task, checked: false }])
       settask("")
+      console.log("data save")
     }
   }
 
   const handledelet = (index) => {
     const Update = multitask.filter((task, i) => {
       if (index === i) {
+        console.log("data dlelet")
         return false
       } else {
         return true
@@ -40,6 +42,7 @@ function App() {
   const toggle = (index) => {
     const status = multitask.map((item, i) => {
       if (index === i) {
+        console.log("checked")
         return { ...item, checked: !item.checked }
       }
       return item

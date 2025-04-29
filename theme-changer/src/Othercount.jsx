@@ -3,8 +3,6 @@ import Contact from './contaxr'
 
 export default function Othercount() {
     const { color, toggle } = useContext(Contact)
-
-
     return (
         <>
             <div>
