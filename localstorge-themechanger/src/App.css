@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.ui {
+    height: 100vh;
+    width: 100%;
+}
+
+.light {
+    background-color: aqua;
+}
+
+.dark {
+    background-color: black;
+}
+
+.btn {
+  text-align: center;
+}
+
+button{
+    padding: 10px 20px;
+}
+
