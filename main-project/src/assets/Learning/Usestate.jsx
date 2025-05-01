@@ -1,5 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { MDBBtn } from 'mdb-react-ui-kit';
+import "../Css/App.css"
+import Themechanger from './Themechanger';
+
+
 
 export default function Usestate() {
     // console.log("usastate coming")
@@ -12,7 +16,7 @@ export default function Usestate() {
 
     return (
         <>
-            <div className='container '>
+            <div className={`container`}>
                 <div>
                     <h1>Usestate is very comon hook that use every where and easy to use</h1>
                 </div>

@@ -17,6 +17,18 @@ a.link:active {
     /* prevent blue when clicked */
 }
 
-.tblwrp{
+.tblwrp {
     word-break: break-all;
+}
+
+.child-link {
+    height: 100vh;
+}
+
+.light {
+    background-color: aqua;
+}
+
+.dark {
+    background-color: burlywood;
 }

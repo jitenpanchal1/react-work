@@ -1,5 +1,7 @@
 import { createRoot } from 'react-dom/client'
 import { RouterProvider } from 'react-router'
+import React from 'react';
+
 
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
