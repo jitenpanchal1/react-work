@@ -1,0 +1,22 @@
+.link {
+    color: black;
+    list-style: none;
+    text-decoration: none;
+    padding-left: 40px;
+}
+
+
+a.link:hover {
+    color: black;
+    /* color on hover, optional */
+}
+
+a.link:focus,
+a.link:active {
+    color: black !important;
+    /* prevent blue when clicked */
+}
+
+.tblwrp{
+    word-break: break-all;
+}
