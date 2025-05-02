@@ -1,15 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router';
 import '../Css/App.css'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
+
+
+
 
 function Header() {
     return (
         <>
-            <header>
+            <header className='bg-primary'>
                 <div className='container'>
                     <nav className="navbar navbar-expand-lg  shadow-0">
                         <div className="container-fluid">

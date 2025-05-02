@@ -1,18 +1,16 @@
-import React, { useContext, useState } from 'react'
+import React, { useCallback, useContext, useState } from 'react'
 import { MDBBtn } from 'mdb-react-ui-kit';
 import "../Css/App.css"
-import Themechanger from './Themechanger';
 
 
 
 export default function Usestate() {
-    // console.log("usastate coming")
-
+  
     const [count, setcount] = useState(0)
 
-    const Update = () => {
+    const Update = useCallback(() => {
         setcount(count + 1)
-    }
+    },[count])
 
     return (
         <>
@@ -33,8 +31,8 @@ export default function Usestate() {
                     <MDBBtn
                         onClick={Update}
                         rounded
-                        className='mx-2'
-                        color='secondary'>
+                        className='mx-2 bg-secondary shadow-0'
+                        color='succes'>
                         click to update count
                     </MDBBtn>
                 </div>

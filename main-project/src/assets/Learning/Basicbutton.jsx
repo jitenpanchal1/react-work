@@ -1,14 +1,21 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Data from './context'
+import { MDBBtn } from 'mdb-react-ui-kit';
 
-export default function Basicbutton() {
+function Basicbutton() {
     const { Changebg } = useContext(Data)
+
     return (
-        <div>
-            <button
+        <div className='mt-5'>
+            <MDBBtn
+                className='bg-success'
+                rounded
+                color='warning'
                 onClick={Changebg}>
-                changetheme
-            </button>
+                click to change
+            </MDBBtn>
         </div>
     )
 }
+
+export default React.memo(Basicbutton)

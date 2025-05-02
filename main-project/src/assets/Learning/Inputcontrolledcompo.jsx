@@ -19,7 +19,7 @@ function Inputcontrolledcompo() {
 
     return (
         <>
-            <div className={` ${color} h-100 container text-center`}>
+            <div className={` ${color}  h-100 container text-center`}>
                 <div>
                     <h1>this is  the example of controlled component</h1>
                 </div>
@@ -40,7 +40,7 @@ function Inputcontrolledcompo() {
                         onClick={click}
                     />
                 </div>
-                <div className='mt-5'>
+                <div className='mt-5 underline'>
                     <h1> submit and see your name : {show}</h1>
                 </div>
             </div>

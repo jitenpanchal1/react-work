@@ -1,12 +1,10 @@
 import { createRoot } from 'react-dom/client'
 import { RouterProvider } from 'react-router'
-import React from 'react';
+import Mainroute from './assets/Mainroute/Mainroute'
 
 
-import 'mdb-react-ui-kit/dist/css/mdb.min.css';
-import "@fortawesome/fontawesome-free/css/all.min.css";
 
-import Mainroute from './assets/Mainroute/Mainroute';
+
 
 createRoot(document.getElementById('root')).render(
   <RouterProvider

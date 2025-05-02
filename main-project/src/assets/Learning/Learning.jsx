@@ -21,7 +21,7 @@ function Learning() {
                             <li><Link to="input">Input-controll-compo</Link></li>
                             <li><Link to="usestate">Hoc</Link></li>
                             <li><Link to="theme">theme-changer</Link></li>
-                            <li><Link to="usestate">To-Do list</Link></li>
+                            <li><Link to="todolist">To-Do list</Link></li>
                             <li><Link to="usestate">Api fetch</Link></li>
                         </ul>
 

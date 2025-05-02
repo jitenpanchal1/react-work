@@ -10,6 +10,7 @@ import Childforcontext from '../Learning/childforcontext'
 import Inputcontrolledcompo from '../Learning/Inputcontrolledcompo'
 import Themechanger from '../Learning/Themechanger'
 import BGcgange from '../Learning/BG-cgange'
+import ToDolist from '../Learning/To-Dolist'
 
 const Mainroute = createBrowserRouter(
     [
@@ -19,6 +20,7 @@ const Mainroute = createBrowserRouter(
                 <>
                     <Header />
                     <Home />
+
                 </>
         }, {
             path: "/home",
@@ -39,9 +41,7 @@ const Mainroute = createBrowserRouter(
             element:
                 <>
                     <Header />
-                    {/* <Themechanger> */}
                     <Learning />
-                    {/* </Themechanger> */}
                 </>,
             children: [
                 {
@@ -76,6 +76,14 @@ const Mainroute = createBrowserRouter(
                         <>
                             <Themechanger>
                                 <BGcgange />
+                            </Themechanger>
+                        </>
+                }, {
+                    path: "todolist",
+                    element:
+                        <>
+                            <Themechanger>
+                                <ToDolist />
                             </Themechanger>
                         </>
                 }
