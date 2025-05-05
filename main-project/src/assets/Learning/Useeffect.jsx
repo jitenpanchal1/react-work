@@ -7,7 +7,7 @@ export default function Useeffect() {
 
     return (
         <>
-            <div className='container'>
+            <div >
                 <div>
                     <h1>Useefect is a asynchronimous hooks</h1>
                 </div>

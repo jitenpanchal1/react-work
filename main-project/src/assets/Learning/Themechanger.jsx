@@ -1,19 +1,14 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import Data from './context'
 
-export default function Themechanger({ children }) {
+function Themechanger({ children }) {
 
-    const [color, setcolor] = useState('light')
+    const [color, setcolor] = useState(() => {
+        return localStorage.getItem("mode") || ("light")
+    })
 
     const [todo, settodo] = useState("")
     const [multi, setmulti] = useState([])
-
-    useEffect(() => {
-        const savechange = localStorage.getItem("mode")
-        if (savechange) {
-            setcolor(savechange)
-        }
-    }, [])
 
     const Changebg = useCallback(() => {
         const change = color === "light" ? "dark" : "light"
@@ -35,7 +30,6 @@ export default function Themechanger({ children }) {
             const save = [...multi, { text: todo }]
             setmulti(save)
             settodo("")
-            console.log("data")
         }
     }, [todo])
 
@@ -48,7 +42,7 @@ export default function Themechanger({ children }) {
             }
         })
         setmulti(delet)
-    }, [])
+    }, [multi])
 
 
 
@@ -58,3 +52,5 @@ export default function Themechanger({ children }) {
         </Data.Provider>
     )
 }
+
+export default React.memo(Themechanger)

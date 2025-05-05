@@ -5,16 +5,16 @@ import "../Css/App.css"
 
 
 export default function Usestate() {
-  
+
     const [count, setcount] = useState(0)
 
     const Update = useCallback(() => {
         setcount(count + 1)
-    },[count])
+    }, [count])
 
     return (
         <>
-            <div className={`container`}>
+            <div>
                 <div>
                     <h1>Usestate is very comon hook that use every where and easy to use</h1>
                 </div>

@@ -19,9 +19,10 @@ function Inputcontrolledcompo() {
 
     return (
         <>
-            <div className={` ${color}  h-100 container text-center`}>
+            <div className={` ${color} text-center h-100`}>
                 <div>
                     <h1>this is  the example of controlled component</h1>
+                    <h2 className='mt-3'>This controled compo use for handle the input value this compo handle by react js more use than uncontrolled compo</h2>
                 </div>
                 <div>
                     <Basicbutton />

@@ -15,8 +15,10 @@ function Childforcontext() {
         <>
             <Data.Provider value={{ context, Update }}>
                 <Usecontext />
-                <div>
-                    <h1>count for other compo {context}</h1>
+                <div >
+                    <div>
+                        <h1>count for other compo {context}</h1>
+                    </div>
                 </div>
             </Data.Provider>
         </>

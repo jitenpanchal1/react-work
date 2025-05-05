@@ -26,13 +26,13 @@ function Header() {
                             <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                                 <ul className="navbar-nav">
                                     <li className="">
-                                        <Link className='link' to="/home"> Home </Link>
+                                        <Link className='link ms-lg-3 ' to="/home"> Home </Link>
                                     </li>
                                     <li className="">
-                                        <Link className='link' to="/contact">Contact </Link>
+                                        <Link className='link ms-lg-3  ' to="/contact">Contact </Link>
                                     </li>
                                     <li className="">
-                                        <Link className='link' to="/learning">Learning </Link>
+                                        <Link className='link ms-lg-3  ' to="/learning">Learning </Link>
                                     </li>
                                 </ul>
                             </div>

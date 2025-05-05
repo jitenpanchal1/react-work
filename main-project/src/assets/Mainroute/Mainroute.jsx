@@ -11,6 +11,11 @@ import Inputcontrolledcompo from '../Learning/Inputcontrolledcompo'
 import Themechanger from '../Learning/Themechanger'
 import BGcgange from '../Learning/BG-cgange'
 import ToDolist from '../Learning/To-Dolist'
+import Seehoccompo from '../Learning/Seehoccompo'
+import Usereducer from '../Learning/Usereducer'
+import Useref from '../Learning/Useref'
+import Cushcompo from '../Learning/Cushcompo'
+import Navigation from '../Learning/Navigation'
 
 const Mainroute = createBrowserRouter(
     [
@@ -85,6 +90,36 @@ const Mainroute = createBrowserRouter(
                             <Themechanger>
                                 <ToDolist />
                             </Themechanger>
+                        </>
+                }, {
+                    path: "hoc",
+                    element:
+                        <>
+                            <Seehoccompo />
+                        </>
+                }, {
+                    path: "usereduce",
+                    element:
+                        <>
+                            <Usereducer />
+                        </>
+                }, {
+                    path: "useref",
+                    element:
+                        <>
+                            <Useref />
+                        </>
+                }, {
+                    path: "custom",
+                    element:
+                        <>
+                            <Cushcompo />
+                        </>
+                }, {
+                    path: "navigation",
+                    element:
+                        <>
+                            <Navigation />
                         </>
                 }
             ]

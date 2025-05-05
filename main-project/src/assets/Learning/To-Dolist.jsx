@@ -5,9 +5,9 @@ function ToDolist() {
 
     const { todo, Addlist, settodo, multi, Dletbtn } = useContext(Data)
     return (
-        <div className='container text-center'>
+        <div className='text-center'>
             <div className='mt-5'>
-                <label htmlFor="name">enter to do</label>
+                <label htmlFor="name" className='me-3'>enter to do</label>
                 <input
                     id='name'
                     type="text"

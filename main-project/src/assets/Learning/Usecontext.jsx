@@ -8,18 +8,19 @@ export default function Usecontext() {
 
     return (
         <>
-            <div className='container'>
+            <div >
                 <div>
                     <h1>this is usecontext example</h1>
                 </div>
-                <div>
-                    <h1>when we hav to use other components state valu to another compo at that situation we hav to use useContext.</h1>
+                <div className='my-5'>
+                    <h1>When we have to use any state value through parent compo to our grand nested child we use usecontext without using props.</h1>
                 </div>
                 <div>
                     <h1>this is my count : {context}</h1>
                 </div>
                 <div>
                     <button
+                        className='my-5'
                         onClick={Update}>
                         click the button
                     </button>
