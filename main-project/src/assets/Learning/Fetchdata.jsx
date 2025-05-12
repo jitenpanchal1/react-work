@@ -35,7 +35,7 @@ function Fetchdata() {
 
     return (
         <>
-            <div className='table-responsive'>
+            <div className='table-responsive  pt-5 '>
                 <MDBTable bordered >
                     <MDBTableHead >
                         <tr className='text-center fs-5 sm-fs-1'>

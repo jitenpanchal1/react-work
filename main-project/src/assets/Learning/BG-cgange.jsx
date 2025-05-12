@@ -1,21 +1,16 @@
-import React, { useContext } from 'react'
-import Data from './context'
+import React from 'react'
 import "../Css/App.css"
-import Basicbutton from './Basicbutton'
-
 
 function BGcgange() {
 
-    const { color } = useContext(Data)
-
     return (
-        <div className={` ${color}  h-100`}>
+        <div className={` h-100`}>
             <div className='text-center'>
                 <div className='pt-5'>
                     <h1> this is bg changer</h1>
                 </div>
                 <div className='mb-5'>
-                    <Basicbutton />
+                    {/* <Basicbutton /> */}
                 </div>
                 <div>
                     <h1>

@@ -1,12 +1,15 @@
 import React, { useCallback, useContext, useState } from 'react'
 import { MDBBtn } from 'mdb-react-ui-kit';
 import "../Css/App.css"
+import Data from './context';
+import Basicbutton from './Basicbutton';
 
 
 
 export default function Usestate() {
 
     const [count, setcount] = useState(0)
+    const { color } = useContext(Data)
 
     const Update = useCallback(() => {
         setcount(count + 1)
@@ -14,11 +17,11 @@ export default function Usestate() {
 
     return (
         <>
-            <div>
-                <div>
+            <div className={` text-center h-100`}>
+                <div className='mt-5'>
                     <h1>Usestate is very comon hook that use every where and easy to use</h1>
                 </div>
-                <div>
+                <div className='my-5'>
                     <h1>In react state is the store the value and properties of object</h1>
                 </div>
                 <div>
@@ -31,7 +34,7 @@ export default function Usestate() {
                     <MDBBtn
                         onClick={Update}
                         rounded
-                        className='mx-2 bg-secondary shadow-0'
+                        className='my-5 bg-secondary shadow-0'
                         color='succes'>
                         click to update count
                     </MDBBtn>

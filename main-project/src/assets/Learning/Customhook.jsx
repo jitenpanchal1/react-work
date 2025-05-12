@@ -4,9 +4,9 @@ export default function ustomhook() {
 
     const [count, setcount] = useState(0)
 
-    const Hndle = useCallback(() => {
+    const Hndle = () => {
         setcount(count + 1)
-    }, [count])
+    }
 
     return {
         count,

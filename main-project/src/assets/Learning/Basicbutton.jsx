@@ -6,13 +6,13 @@ function Basicbutton() {
     const { Changebg } = useContext(Data)
 
     return (
-        <div className='mt-5'>
+        <div className=''>
             <MDBBtn
-                className='bg-success'
+                className='bg-success shadow-0'
                 rounded
                 color='warning'
                 onClick={Changebg}>
-                click to change
+                click to change the theme
             </MDBBtn>
         </div>
     )

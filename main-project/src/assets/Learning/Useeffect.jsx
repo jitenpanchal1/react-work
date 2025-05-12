@@ -2,12 +2,12 @@ import React from 'react'
 import Fetchdata from './Fetchdata'
 
 
-export default function Useeffect() {
 
+export default function Useeffect() {
 
     return (
         <>
-            <div >
+            <div className={`text-center pt-5 h-100`} >
                 <div>
                     <h1>Useefect is a asynchronimous hooks</h1>
                 </div>
@@ -17,7 +17,7 @@ export default function Useeffect() {
                 <div>
                     <Fetchdata />
                 </div>
-            </div>
+            </div >
         </>
     )
 }

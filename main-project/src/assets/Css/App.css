@@ -25,11 +25,27 @@ a.link:active {
 .child-link {
     height: 100vh;
 }
-F
+
 .light {
     background-color: aqua;
+    color: rgb(36, 32, 32);
 }
 
 .dark {
     background-color: burlywood;
+    color: rgb(36, 32, 32);
+}
+
+.todoovrf {
+    overflow-y: scroll;
+}
+
+#name {
+    outline: none;
+    border: none;
+}
+
+.Home,
+.contact {
+    height: 100vh;
 }

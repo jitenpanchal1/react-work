@@ -1,31 +1,37 @@
 import React, { useContext } from 'react'
 import Data from './context'
+import { MDBBtn } from 'mdb-react-ui-kit';
 
+function Usecontext() {
 
-export default function Usecontext() {
-
-    const { context, Update } = useContext(Data)
-
+    const { color, context, Update } = useContext(Data)
     return (
         <>
-            <div >
-                <div>
-                    <h1>this is usecontext example</h1>
+            <div className={`text-center pt-5 h-100`}>
+                <div className=''>
+                    <h1>
+                        When we want to share data like a component, value, or function across components without passing it manually through props at each level, we use the useContext hook.
+                    </h1>
                 </div>
                 <div className='my-5'>
-                    <h1>When we have to use any state value through parent compo to our grand nested child we use usecontext without using props.</h1>
+                    <h1>This is the simple example of useContext</h1>
                 </div>
                 <div>
-                    <h1>this is my count : {context}</h1>
+                    <h1>This is my count : {context}</h1>
                 </div>
                 <div>
-                    <button
-                        className='my-5'
-                        onClick={Update}>
-                        click the button
-                    </button>
+                    <MDBBtn
+                        onClick={Update}
+                        rounded
+                        color='warning'
+                        className='my-5 shadow-0'>
+                        Click to add count
+                    </MDBBtn>
                 </div>
             </div>
+
         </>
     )
 }
+
+export default Usecontext

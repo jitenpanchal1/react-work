@@ -1,13 +1,10 @@
-import React, { useContext, useState } from 'react'
-import Data from './context'
-import Basicbutton from './Basicbutton'
+import React, { useState } from 'react'
 
 
 function Inputcontrolledcompo() {
 
     const [name, setname] = useState("")
     const [show, setshow] = useState("")
-    const { color } = useContext(Data)
 
     const Change = (e) => {
         setname(e.target.value)
@@ -19,13 +16,17 @@ function Inputcontrolledcompo() {
 
     return (
         <>
-            <div className={` ${color} text-center h-100`}>
+            <div className={`text-center pt-5 h-100`}>
                 <div>
-                    <h1>this is  the example of controlled component</h1>
-                    <h2 className='mt-3'>This controled compo use for handle the input value this compo handle by react js more use than uncontrolled compo</h2>
+                    <h1>
+                        this is  the example of controlled component.
+                    </h1>
+                    <h2 className='mt-3'>
+                        This controled compo use for handle the input value this compo handle by react js more use than uncontrolled compo.
+                    </h2>
                 </div>
                 <div>
-                    <Basicbutton />
+                    {/* <Basicbutton /> */}
                 </div>
                 <div className='mt-5'>
                     <label htmlFor="name" className='me-2'> Enter your name </label>

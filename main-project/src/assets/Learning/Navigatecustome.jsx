@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate, useNavigation } from 'react-router'
+import { useNavigate } from 'react-router'
 
 export default function Navigatecustome() {
 
@@ -16,7 +16,5 @@ export default function Navigatecustome() {
         gotothemechanger: () => navigation("../theme"),
         gotoToDolist: () => navigation("../todolist"),
         gotoApifetch: () => navigation("../hoc"),
-        
     }
-
 }

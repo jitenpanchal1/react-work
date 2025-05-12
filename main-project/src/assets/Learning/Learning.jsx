@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link, Outlet } from 'react-router'
 import "../Css/App.css"
+import Data from './context'
 
 
 
 function Learning() {
 
-
+    const { color } = useContext(Data)
 
     return (
 
@@ -29,15 +30,17 @@ function Learning() {
                             <li className='my-2'><Link to="navigation">Usenavigation</Link></li>
                             <li className='my-2'><Link to="theme">theme-changer</Link></li>
                             <li className='my-2'><Link to="todolist">To-Do list</Link></li>
-                            <li className='my-2'><Link to="usestate">Api fetch</Link></li>
+                            <li className='my-2'><Link to="password">Password-Generator</Link></li>
+                            <li className='my-2'><Link to="register">Register</Link></li>
+                            {/* <li className='my-2'><Link to="usestate">Api fetch</Link></li> */}
                         </ol>
                     </div>
                 </div>
-                <div className='col-10 sm-col-9'>
+                <div className={`${color} col-10 sm-col-9 `}>
                     <Outlet />
                 </div>
             </div>
-        </div>
+        </div >
 
     )
 }

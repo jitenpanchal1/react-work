@@ -1,10 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Navigatecustome from './Navigatecustome'
 import { MDBBtn } from 'mdb-react-ui-kit';
+import Data from './context';
 
 function Navigation() {
-
-
 
     const { gotousestate,
         gotouseffect,
@@ -17,9 +16,11 @@ function Navigation() {
         gotothemechanger,
         gotoToDolist,
         gotoApifetch } = Navigatecustome()
+
+    const { color } = useContext(Data)
     return (
         <>
-            <div className='d-flex flex-column align-items-center h-100 justify-content-between'>
+            <div className={`d-flex flex-column align-items-center    h-100 justify-content-between`}>
                 <MDBBtn
                     onClick={gotousestate}
                     className='w-25 mt-5'>

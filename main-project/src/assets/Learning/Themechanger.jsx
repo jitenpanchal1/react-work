@@ -10,11 +10,20 @@ function Themechanger({ children }) {
     const [todo, settodo] = useState("")
     const [multi, setmulti] = useState([])
 
-    const Changebg = useCallback(() => {
+    const [context, setcontext] = useState(0)
+
+    const Update = () => {
+        setcontext(context + 1)
+        console.log("context update")
+    }
+
+
+    const Changebg = () => {
         const change = color === "light" ? "dark" : "light"
         setcolor(change)
         localStorage.setItem("mode", change)
-    }, [color])
+        console.log("change bg")
+    }
 
     useEffect(() => {
         const saved = localStorage.getItem("list")
@@ -25,15 +34,16 @@ function Themechanger({ children }) {
         localStorage.setItem("list", JSON.stringify(multi))
     }, [multi])
 
-    const Addlist = useCallback(() => {
+    const Addlist = () => {
         if (todo.trim()) {
             const save = [...multi, { text: todo }]
             setmulti(save)
             settodo("")
         }
-    }, [todo])
+        console.log("addlist")
+    }
 
-    const Dletbtn = useCallback((index) => {
+    const Dletbtn = (index) => {
         const delet = multi.filter((item, i) => {
             if (index === i) {
                 return false
@@ -42,12 +52,11 @@ function Themechanger({ children }) {
             }
         })
         setmulti(delet)
-    }, [multi])
-
-
+        console.log("delet")
+    }
 
     return (
-        <Data.Provider value={{ color, Changebg, todo, Addlist, settodo, multi, Dletbtn }}>
+        <Data.Provider value={{ color, Changebg, todo, Addlist, settodo, multi, Dletbtn, context, Update }}>
             {children}
         </Data.Provider>
     )

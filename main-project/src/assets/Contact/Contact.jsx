@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import Data from '../Learning/context'
 
 export default function Contact() {
+
+    const { color } = useContext(Data)
     return (
         <>
-            <div className='container text-center'>
+            <div className={` ${color} contact  text-center`}>
                 <div>
                     <h1>my name is jeeten</h1>
                 </div>
