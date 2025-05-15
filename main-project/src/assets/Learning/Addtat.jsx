@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router'
+import "../Css/App.css"
 
 function Addtat() {
     const [msg, setmsg] = useState(null)
+    const [errmsg, seterrmsg] = useState(null)
     const [name, setname] = useState("")
     const [email, setemail] = useState("")
     const [password, setpassword] = useState("")
@@ -12,13 +14,16 @@ function Addtat() {
         e.preventDefault()
 
         if (!name) {
-            setmsg("pls fill the all above field")
+            setmsg("")
+            seterrmsg("pls fill the all above field")
             return;
         } else if (!email) {
-            setmsg("pls fill the all above field")
+            setmsg("")
+            seterrmsg("pls fill the all above field")
             return;
         } else if (!password) {
-            setmsg("pls fill the all above field")
+            setmsg("")
+            seterrmsg("pls fill the all above field")
             return;
         }
 
@@ -31,12 +36,12 @@ function Addtat() {
                 },
                 body: JSON.stringify(data)
             })
-
+            seterrmsg("")
             setmsg(() => {
                 return (
-                    <h3 >
+                    <p >
                         ✅ Data saved successfully. Click <Link to="/learning/showdata">here</Link> to view it.
-                    </h3>
+                    </p>
 
                 )
             })
@@ -45,45 +50,55 @@ function Addtat() {
             setpassword("")
 
         } catch (err) {
-            setmsg("failed to save")
+            setmsg("")
+            seterrmsg("failed to save")
         }
     }
 
     return (
-        <div>
-            <form onSubmit={handsave}>
-                <div>
-                    <label htmlFor="name">Enter name</label>
-                    <input
-                        id='name'
-                        type="text"
-                        value={name}
-                        onChange={(e) => setname(e.target.value)} />
-                </div>
-                <div>
-                    <label htmlFor="email">Enter Email</label>
-                    <input type="email"
-                        id="email"
-                        value={email}
-                        onChange={(e) => setemail(e.target.value)} />
-                </div>
-                <div>
-                    <label htmlFor="pass">Enter Password</label>
-                    <input
-                        type="password"
-                        id="pass"
-                        value={password}
-                        onChange={(e) => setpassword(e.target.value)} />
-                </div>
-                <div>
-                    <input
-                        type="submit"
-                        value="submit" />
-                </div>
-                <div>
-                    <h1>{msg}</h1>
-                </div>
-            </form>
+        <div className='d-flex justify-content-center align-items-center h-100'>
+            <div className='text-center add h-50 w-25 px-4  border border-dark'>
+                <form onSubmit={handsave}>
+                    <div>
+                        <label className='w-100 my-2' htmlFor="name">Enter name</label>
+                        <input
+                            className='w-100'
+                            id='name'
+                            type="text"
+                            value={name}
+                            onChange={(e) => setname(e.target.value)} />
+                    </div>
+                    <div >
+                        <label className='w-100 my-2' htmlFor="email">Enter Email</label>
+                        <input
+                            className='w-100'
+                            type="email"
+                            id="email"
+                            value={email}
+                            onChange={(e) => setemail(e.target.value)} />
+                    </div>
+                    <div>
+                        <label className='w-100 my-2' htmlFor="pass">Enter Password</label>
+                        <input
+                            className='w-100'
+                            type="password"
+                            id="pass"
+                            value={password}
+                            onChange={(e) => setpassword(e.target.value)} />
+                    </div>
+                    <div className='my-2'>
+                        <input
+                            type="submit"
+                            value="submit" />
+                    </div>
+                    <div className='add-msg'>
+                        {msg}
+                    </div>
+                    <div className='add-msg-2'>
+                        {errmsg}
+                    </div>
+                </form>
+            </div>
         </div>
     )
 }

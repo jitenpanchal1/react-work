@@ -5,7 +5,7 @@ import { increment, incrementByAmount } from "../refuxfeature/Counterslice"
 
 function Readuxcounter() {
 
-    const [nam, setnam] = useState(0)
+    const [nam, setnam] = useState(null)
     const count = useSelector((state) => state.counter.value)
     const dispatch = useDispatch()
 

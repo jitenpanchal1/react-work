@@ -39,7 +39,9 @@ function Editform() {
             setmsg(() => {
                 return (
                     <>
-                        <p>Your data is edited succesfully  <Link to="/learning/showdata">click here</Link> to check</p>
+                        <p>
+                            Your data is edited succesfully  <Link to="/learning/showdata">click here</Link> to check.
+                        </p>
                     </>
                 )
             })
@@ -53,17 +55,17 @@ function Editform() {
     }
     return (
         <>
-            <div className='text-center'>
-                <div>
+            <div className='d-flex justify-content-center align-items-center h-100'>
+                <div className='text-center h-50 w-25 px-4 border border-dark'>
                     <form onSubmit={savedata}>
-                        <div>
+                        <div className='w-100 my-2'>
                             <input
                                 type="text"
                                 placeholder={`${id}`}
                                 disabled />
                         </div>
                         <div>
-                            <label htmlFor="name">Enter your name</label>
+                            <label className='w-100 my-2' htmlFor="name">Enter your name</label>
                             <input
                                 id='name'
                                 type="text"
@@ -71,7 +73,7 @@ function Editform() {
                                 onChange={(e) => setname(e.target.value)} />
                         </div>
                         <div>
-                            <label htmlFor="email">Enter your Mail</label>
+                            <label className='w-100 my-2' htmlFor="email">Enter your Mail</label>
                             <input
                                 type="email"
                                 id="email"
@@ -79,14 +81,14 @@ function Editform() {
                                 onChange={(e) => setemail(e.target.value)} />
                         </div>
                         <div>
-                            <label htmlFor="passs">Enter Password</label>
+                            <label className='w-100 my-2' htmlFor="passs">Enter Password</label>
                             <input
                                 type="text"
                                 id="passs"
                                 value={password}
                                 onChange={(e) => setpassword(e.target.value)} />
                         </div>
-                        <div>
+                        <div className='my-2'>
                             <input
                                 type="submit"
                                 value="submit" />

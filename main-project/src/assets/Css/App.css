@@ -49,3 +49,21 @@ a.link:active {
 .contact {
     height: 100vh;
 }
+
+.add {
+    position: relative;
+}
+
+.add-msg {
+    position: absolute;
+    text-transform: capitalize;
+    left: 0;
+    bottom: 20px;
+}
+
+.add-msg-2 {
+    position: absolute;
+    text-transform: capitalize;
+    left: 20%;
+    bottom: 15%;
+}

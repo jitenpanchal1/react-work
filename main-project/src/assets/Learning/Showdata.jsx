@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 import { useNavigate } from 'react-router';
 
@@ -7,6 +7,7 @@ function Showdata() {
 
     const [userdata, setuserdata] = useState([])
     const [msg, setmsg] = useState("")
+    const [search, setsearch] = useState("")
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -23,6 +24,18 @@ function Showdata() {
             setmsg("Failed to load data")
         }
     }
+
+    const filterdata = useMemo(() => {
+        return userdata.filter((data) => {
+            return (
+                data.id.toLowerCase().includes(search.toLowerCase()) ||
+                data.name.toLowerCase().includes(search.toLowerCase()) ||
+                data.email.toLowerCase().includes(search.toLowerCase())
+            )
+        })
+        // userdata.filter((data) => data.id.toLowerCase().includes(search.toLowerCase()))
+
+    })
 
     const delet = async (id) => {
         try {
@@ -43,6 +56,13 @@ function Showdata() {
     return (
         <>
             <div>
+                <div>
+                    <input
+                        placeholder='search here...'
+                        type="text"
+                        value={search}
+                        onChange={(e) => setsearch(e.target.value)} />
+                </div>
                 <MDBTable bordered >
                     <MDBTableHead>
                         <tr className='text-center fs-4'>
@@ -54,7 +74,26 @@ function Showdata() {
                             <th scope='col'>Action</th>
                         </tr>
                     </MDBTableHead>
-                    {userdata.map((data, index) => {
+                    {/* {userdata.map((data, index) => {
+                        return (
+                            <>
+                                <MDBTableBody>
+                                    <tr className='text-center' key={data.id} >
+                                        <td>{index}</td>
+                                        <td>{data.id}</td>
+                                        <td>{data.name}</td>
+                                        <td>{data.email}</td>
+                                        <td>{data.password}</td>
+                                        <td>
+                                            <button onClick={() => delet(data.id)}>click to delet {msg}</button>
+                                            <button onClick={() => detail(data.id)}>click to detail </button>
+                                        </td>
+                                    </tr>
+                                </MDBTableBody>
+                            </>
+                        )
+                    })} */}
+                    {filterdata.map((data, index) => {
                         return (
                             <>
                                 <MDBTableBody>
