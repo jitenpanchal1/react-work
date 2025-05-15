@@ -31,7 +31,13 @@ function Learning() {
                             <li className='my-2'><Link to="theme">theme-changer</Link></li>
                             <li className='my-2'><Link to="todolist">To-Do list</Link></li>
                             <li className='my-2'><Link to="password">Password-Generator</Link></li>
-                            <li className='my-2'><Link to="register">Register</Link></li>
+                            <li className='my-2'><Link to="adddata">Addata</Link></li>
+                            {/* <li className='my-2'><Link to="showdata">Showdata</Link></li> */}
+                            <li className='my-2'><Link to="redux">Redux-toolkit</Link>
+                                <ol>
+                                    <li><Link to="reduxtodo">Redux To-do list</Link></li>
+                                </ol>
+                            </li>
                             {/* <li className='my-2'><Link to="usestate">Api fetch</Link></li> */}
                         </ol>
                     </div>

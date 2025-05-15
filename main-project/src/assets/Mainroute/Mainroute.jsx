@@ -17,7 +17,17 @@ import Useref from '../Learning/Useref'
 import Cushcompo from '../Learning/Cushcompo'
 import Navigation from '../Learning/Navigation'
 import Paawordgenerator from '../Learning/Paawordgenerator'
-import Register from '../Learning/Register'
+
+
+import Readuxcounter from '../Learning/Readuxcounter'
+import { store } from "../redux-store/store"
+import { Provider } from 'react-redux'
+import Reduxtodolist from '../Learning/Reduxtodolist'
+
+import Showdata from '../Learning/Showdata'
+import Addtat from '../Learning/Addtat'
+import Seedata from '../Learning/Seedata'
+import Editform from '../Learning/Editform'
 
 const Mainroute = createBrowserRouter(
     [
@@ -145,10 +155,48 @@ const Mainroute = createBrowserRouter(
                         </>
                 },
                 {
-                    path: "register",
+                    path: "adddata",
                     element:
                         <>
-                            <Register />
+                            <Addtat />
+                        </>
+                },
+                {
+                    path: "showdata",
+                    element:
+                        <>
+                            <Showdata />
+                        </>
+                },
+                {
+                    path: "redux",
+                    element:
+                        <>
+                            <Provider store={store}>
+                                <Readuxcounter />
+                            </Provider>
+
+                        </>
+                }, {
+                    path: "reduxtodo",
+                    element:
+                        <>
+                            <Provider store={store}>
+                                <Reduxtodolist />
+                            </Provider>
+
+                        </>
+                }, {
+                    path: "seedata/:id",
+                    element:
+                        <>
+                            <Seedata />
+                        </>
+                }, {
+                    path: "editdata/:id",
+                    element:
+                        <>
+                            <Editform />
                         </>
                 }
             ]
