@@ -35,16 +35,16 @@ function Fetchdata() {
 
     return (
         <>
-            <div className='table-responsive  pt-5 '>
+            <div className='table-responsive text-white pt-5 '>
                 <MDBTable bordered >
                     <MDBTableHead >
-                        <tr className='text-center fs-5 sm-fs-1'>
-                            <th>Id</th>
-                            <th>Name</th>
-                            <th>Username</th>
-                            <th>Email</th>
-                            <th>Street</th>
-                            <th>Zipcode</th>
+                        <tr className='text-center  fs-5 sm-fs-1'>
+                            <th className='text-white'>Id</th>
+                            <th className='text-white'>Name</th>
+                            <th className='text-white'>Username</th>
+                            <th className='text-white'>Email</th>
+                            <th className='text-white'>Street</th>
+                            <th className='text-white'>Zipcode</th>
                         </tr>
                     </MDBTableHead>
                     {data.map((dd) => {
@@ -52,12 +52,12 @@ function Fetchdata() {
                             <>
                                 <MDBTableBody>
                                     <tr className='text-center'>
-                                        <td className='tblwrp'>{dd.id}</td>
-                                        <td className='tblwrp'>{dd.name}</td>
-                                        <td className='tblwrp'>{dd.username}</td>
-                                        <td className='tblwrp'>{dd.email}</td>
-                                        <td className='tblwrp'>{dd.address.street}</td>
-                                        <td className='tblwrp'>{dd.address.zipcode}</td>
+                                        <td className='tblwrp text-white'>{dd.id}</td>
+                                        <td className='tblwrp text-white'>{dd.name}</td>
+                                        <td className='tblwrp text-white'>{dd.username}</td>
+                                        <td className='tblwrp text-white'>{dd.email}</td>
+                                        <td className='tblwrp text-white'>{dd.address.street}</td>
+                                        <td className='tblwrp text-white'>{dd.address.zipcode}</td>
                                     </tr>
                                 </MDBTableBody>
                             </>

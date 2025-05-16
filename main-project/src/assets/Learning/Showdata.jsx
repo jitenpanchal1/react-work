@@ -35,7 +35,7 @@ function Showdata() {
         })
         // userdata.filter((data) => data.id.toLowerCase().includes(search.toLowerCase()))
 
-    })
+    }, [search, userdata])
 
     const delet = async (id) => {
         try {
@@ -56,8 +56,10 @@ function Showdata() {
     return (
         <>
             <div>
-                <div>
+                <div className='text-center py-5'>
+                    <label htmlFor="serch" className='me-2'>Search Box </label>
                     <input
+                        id='serch'
                         placeholder='search here...'
                         type="text"
                         value={search}

@@ -27,13 +27,14 @@ a.link:active {
 }
 
 .light {
-    background-color: aqua;
+    background-color: whitesmoke;
     color: rgb(36, 32, 32);
 }
 
 .dark {
-    background-color: burlywood;
-    color: rgb(36, 32, 32);
+    /* background-color: burlywood; */
+    background-color: rgb(36, 32, 32);
+    color: whitesmoke;
 }
 
 .todoovrf {

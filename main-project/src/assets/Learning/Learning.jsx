@@ -33,7 +33,6 @@ function Learning() {
                             <li className='my-2'><Link to="password">Password-Generator</Link></li>
                             <li className='my-2'><Link to="adddata">Addata</Link></li>
                             <li className='my-2'><Link to="showdata">Showdata</Link></li>
-                            <li className='my-2'><Link to="search">Search</Link></li>
                             <li className='my-2'><Link to="redux">Redux-toolkit</Link>
                                 <ol>
                                     <li><Link to="reduxtodo">Redux To-do list</Link></li>

@@ -28,7 +28,6 @@ import Showdata from '../Learning/Showdata'
 import Addtat from '../Learning/Addtat'
 import Seedata from '../Learning/Seedata'
 import Editform from '../Learning/Editform'
-import Searchdata from '../Learning/Searchdata'
 
 const Mainroute = createBrowserRouter(
     [
@@ -198,12 +197,6 @@ const Mainroute = createBrowserRouter(
                     element:
                         <>
                             <Editform />
-                        </>
-                }, {
-                    path: "search",
-                    element:
-                        <>
-                            <Searchdata />
                         </>
                 }
             ]

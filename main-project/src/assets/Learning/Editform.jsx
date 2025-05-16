@@ -1,4 +1,3 @@
-import { data } from 'jquery'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import { Link } from 'react-router'
