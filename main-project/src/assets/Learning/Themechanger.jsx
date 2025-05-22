@@ -17,7 +17,6 @@ function Themechanger({ children }) {
         console.log("context update")
     }
 
-
     const Changebg = () => {
         const change = color === "light" ? "dark" : "light"
         setcolor(change)
@@ -26,9 +25,10 @@ function Themechanger({ children }) {
     }
 
     useEffect(() => {
-        const saved = localStorage.getItem("list")
-        setmulti(JSON.parse(saved))
-    }, [])
+        const saved = localStorage.getItem("list");
+        const parsed = saved ? JSON.parse(saved) : [];
+        setmulti(parsed);
+    }, []);
 
     useEffect(() => {
         localStorage.setItem("list", JSON.stringify(multi))
@@ -36,7 +36,7 @@ function Themechanger({ children }) {
 
     const Addlist = () => {
         if (todo.trim()) {
-            const save = [...multi, { text: todo }]
+            const save = [...(multi || []), { text: todo }]
             setmulti(save)
             settodo("")
         }

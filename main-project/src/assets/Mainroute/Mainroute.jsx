@@ -184,7 +184,6 @@ const Mainroute = createBrowserRouter(
                             <Provider store={store}>
                                 <Reduxtodolist />
                             </Provider>
-
                         </>
                 }, {
                     path: "seedata/:id",

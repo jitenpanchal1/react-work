@@ -13,6 +13,7 @@ function Readuxcounter() {
         dispatch(incrementByAmount(nam))
         setnam(0)
     }
+
     return (
         <>
             <div className='text-center pt-5'>

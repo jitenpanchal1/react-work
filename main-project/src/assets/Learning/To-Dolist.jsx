@@ -29,31 +29,21 @@ function ToDolist() {
                     </div>
                     <div className='text-uppercase'>
                         <MDBListGroup>
-                            {multi.map((data, index) => {
-                                return (
-                                    <>
-                                        <MDBListGroupItem
-                                            key={data.toString()}
-                                            noBorders
-                                            rounded
-                                            color='success'
-                                            className='mt-2 p-0 rounded-1 d-flex align-items-center justify-content-between'>
-
-                                            <div className='ps-3'>
-                                                {index + 1}.
-                                            </div>
-                                            <div>
-                                                {data.text}
-                                            </div>
-                                            <MDBBtn
-                                                color='warning'
-                                                onClick={() => Dletbtn(index)}>
-                                                delet
-                                            </MDBBtn>
-                                        </MDBListGroupItem>
-                                    </>
-                                )
-                            })}
+                            {(multi ?? []).map((data, index) => (
+                                <MDBListGroupItem
+                                    key={`${data.text}-${index}`}
+                                    noBorders
+                                    rounded
+                                    color='success'
+                                    className='mt-2 p-0 rounded-1 d-flex align-items-center justify-content-between'
+                                >
+                                    <div className='ps-3'>{index + 1}.</div>
+                                    <div>{data.text}</div>
+                                    <MDBBtn color='warning' onClick={() => Dletbtn(index)}>
+                                        delete
+                                    </MDBBtn>
+                                </MDBListGroupItem>
+                            ))}
                         </MDBListGroup>
                     </div>
                 </div>

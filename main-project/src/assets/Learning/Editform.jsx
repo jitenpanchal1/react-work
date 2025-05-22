@@ -39,7 +39,7 @@ function Editform() {
                 return (
                     <>
                         <p>
-                            Your data is edited succesfully  <Link to="/learning/showdata">click here</Link> to check.
+                            Your data is edited succesfully <Link to="/learning/showdata">click here</Link> to check.
                         </p>
                     </>
                 )

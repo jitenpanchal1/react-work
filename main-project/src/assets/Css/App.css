@@ -33,7 +33,7 @@ a.link:active {
 
 .dark {
     /* background-color: burlywood; */
-    background-color: rgb(36, 32, 32);
+    background-color: black;
     color: whitesmoke;
 }
 
@@ -67,4 +67,9 @@ a.link:active {
     text-transform: capitalize;
     left: 20%;
     bottom: 15%;
+}
+
+.position {
+    position: relative;
+    z-index: 2;
 }

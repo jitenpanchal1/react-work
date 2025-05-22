@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 import { useNavigate } from 'react-router';
+import { div } from 'three/tsl';
 
 
 function Showdata() {
@@ -28,9 +29,9 @@ function Showdata() {
     const filterdata = useMemo(() => {
         return userdata.filter((data) => {
             return (
-                data.id.toLowerCase().includes(search.toLowerCase()) ||
-                data.name.toLowerCase().includes(search.toLowerCase()) ||
-                data.email.toLowerCase().includes(search.toLowerCase())
+                    data.id.toLowerCase().includes(search.toLowerCase()) ||
+                    data.name.toLowerCase().includes(search.toLowerCase()) ||
+                    data.email.toLowerCase().includes(search.toLowerCase())         
             )
         })
         // userdata.filter((data) => data.id.toLowerCase().includes(search.toLowerCase()))
@@ -67,13 +68,13 @@ function Showdata() {
                 </div>
                 <MDBTable bordered >
                     <MDBTableHead>
-                        <tr className='text-center fs-4'>
-                            <th scope='col'>dat number</th>
-                            <th scope='col'>Unique Id</th>
-                            <th scope='col'>Name</th>
-                            <th scope='col'>Email</th>
-                            <th scope='col'>Password</th>
-                            <th scope='col'>Action</th>
+                        <tr className='text-center fs-4 text-light'>
+                            <th className='text-light' scope='col'>dat number</th>
+                            <th className='text-light' scope='col'>Unique Id</th>
+                            <th className='text-light' scope='col'>Name</th>
+                            <th className='text-light' scope='col'>Email</th>
+                            <th className='text-light' scope='col'>Password</th>
+                            <th className='text-light' scope='col'>Action</th>
                         </tr>
                     </MDBTableHead>
                     {/* {userdata.map((data, index) => {
@@ -100,12 +101,12 @@ function Showdata() {
                             <>
                                 <MDBTableBody>
                                     <tr className='text-center' key={data.id} >
-                                        <td>{index}</td>
-                                        <td>{data.id}</td>
-                                        <td>{data.name}</td>
-                                        <td>{data.email}</td>
-                                        <td>{data.password}</td>
-                                        <td>
+                                        <td className='text-light' >{index}</td>
+                                        <td className='text-light' >{data.id}</td>
+                                        <td className='text-light' >{data.name}</td>
+                                        <td className='text-light' >{data.email}</td>
+                                        <td className='text-light' >{data.password}</td>
+                                        <td className='text-light' >
                                             <button onClick={() => delet(data.id)}>click to delet {msg}</button>
                                             <button onClick={() => detail(data.id)}>click to detail </button>
                                         </td>
