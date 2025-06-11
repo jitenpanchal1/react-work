@@ -4,18 +4,22 @@ import { Container, PostCard } from '../Index'
 import services from '../../auth/config'
 import "../../App.css"
 import { useNavigate } from 'react-router'
+import { useSelector } from 'react-redux'
 
 function Home() {
 
     const [post, setpost] = useState([])
     const navgate = useNavigate()
+    const user = useSelector((state) => state.auth.userData)
 
     useEffect(() => {
         services.getposts().then((item) => {
-            setpost(item.documents)
-            // console.log(item.documents)
-        })
-    }, [])
+            if (item?.documents) {
+                const otherPosts = item.documents.filter(post => post.userId !== user?.$id);
+                setpost(otherPosts);
+            }
+        });
+    }, [user]);
 
     if (post.length === 0) {
         return (
@@ -34,7 +38,7 @@ function Home() {
                     {post.map((item) =>
                     (
                         <div key={item.$id} className="mx-auto col-sm-6 col-md-4 col-lg-4 ">
-                            <PostCard {...item} fileId={item.featuredImg}  id={item.$id} className="post-card" />
+                            <PostCard {...item} fileId={item.featuredImg} id={item.$id} className="post-card" />
                         </div>
                     ))}
                 </div>

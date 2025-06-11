@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Container, LogoutBtn, Logo } from '../Index'
 import { useSelector } from 'react-redux'
-import { useNavigate, Link } from 'react-router'
+import { useNavigate, Link, useParams } from 'react-router'
 import "../../App.css"
 
 
@@ -10,6 +10,7 @@ function Header() {
     const authStatus = useSelector((state) => state.auth.status)
     const navigate = useNavigate()
     const [isOpen, setIsOpen] = useState(false)
+    const { slug } = useParams()
 
 
     const navItem = [
@@ -38,6 +39,12 @@ function Header() {
             slug: "/add-post",
             active: authStatus
         },
+        {
+            name: "My Post",
+            slug: "/my-post",
+            active: authStatus
+        }
+
     ]
     return (
         <header>

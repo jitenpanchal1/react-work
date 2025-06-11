@@ -6,6 +6,7 @@ import { BasicButton, Input, RTe, Select } from '../Index';
 import services from '../../auth/config';
 import { ID } from 'appwrite';
 import authentication from '../../auth/auth';
+import './Postform.css';
 
 function Postform({ post }) {
     const { register, handleSubmit, watch, setValue, control, getValues } = useForm({
@@ -70,7 +71,7 @@ function Postform({ post }) {
                 userId: userData.$id,
                 name: name
             });
-            
+
             if (complete) {
                 setmsg("Post creater succesfully")
             }

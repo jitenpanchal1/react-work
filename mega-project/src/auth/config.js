@@ -89,6 +89,21 @@ export class Services {
     }
   }
 
+  async getuserpost(userId) {
+    try {
+      return await this.database.listDocuments(
+        Urls.databaseId,
+        Urls.collectionId,
+        [
+          // quries
+          Query.equal("userId", userId),
+        ]
+      );
+    } catch (error) {
+      console.log("failed to get postssssssssssss");
+    }
+  }
+
   // upload file
 
   async UploadFile(file) {

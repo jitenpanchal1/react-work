@@ -11,6 +11,7 @@ import Addpost from './components/pages/Addpost.jsx'
 import Editpost from './components/pages/Editpost.jsx'
 import Post from './components/pages/Post.jsx'
 import Home from './components/pages/Home.jsx'
+import Mypost from './components/pages/Mypost.jsx'
 
 const router = createBrowserRouter(
 
@@ -67,6 +68,10 @@ const router = createBrowserRouter(
         {
           path: "/post/:slug",
           element: <Post />
+        },
+        {
+          path: "/my-post/",
+          element: <Mypost />
         }
       ]
     }
