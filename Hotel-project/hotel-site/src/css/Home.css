@@ -1,0 +1,91 @@
+:root {
+    --text-orange: #ff6f00;
+}
+
+.home-bg {
+    background-color: #fdece4;
+    position: relative;
+    overflow: hidden;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.dish {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    /* max-width: 400px; */
+    position: relative;
+    z-index: 1;
+}
+
+.slider{
+    position: relative;
+}
+.shape {
+    position: absolute;
+    top: -350px;
+    left: -150px;
+    width: 120%;
+    z-index: 0;
+}
+
+.shape-two{
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    width: 40%;
+    z-index: 0;
+}
+
+.rigth-name {
+    font-size: 6rem;
+    color: var(--text-orange);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.left-text {
+    color: #649483;
+}
+.jouney{
+    position: relative;
+}
+
+
+
+@media (max-width: 992px) {
+    .rigth-name {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .shape {
+        top: -120px;
+        left: -100px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .shape {
+        top: 0px;
+        left: 0px;
+    }
+}
+
+@media (max-width: 576px) {
+    .rigth-name {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .dish {
+        max-width: 280px;
+    }
+
+    .shape {
+        top: 0px;
+        left: 0px;
+    }
+}

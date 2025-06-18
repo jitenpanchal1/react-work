@@ -1,0 +1,87 @@
+/* Reservation.css */
+
+.reservation-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff8f0;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.reservation-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 24px;
+    font-size: 2rem;
+}
+
+.reservation-form {
+    /* margin: 50p; */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.reservation-form label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.reservation-form input[type="text"],
+.reservation-form input[type="tel"],
+.reservation-form input[type="date"],
+.reservation-form input[type="time"] {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline-color: #ff8c42;
+}
+
+.reservation-form input[type="submit"] {
+    padding: 12px;
+    background-color: #ff8c42;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.reservation-form input[type="submit"]:hover {
+    background-color: #e76f39;
+}
+
+.success-message {
+    color: green;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 16px;
+}
+
+@media (max-width: 600px) {
+    .reservation-container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .reservation-form input[type="text"],
+    .reservation-form input[type="tel"],
+    .reservation-form input[type="date"],
+    .reservation-form input[type="time"] {
+        font-size: 0.95rem;
+    }
+
+    .reservation-form input[type="submit"] {
+        font-size: 0.95rem;
+    }
+}

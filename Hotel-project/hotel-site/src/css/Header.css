@@ -1,0 +1,134 @@
+:root {
+  --primary-green: #43896d;
+  --accent-orange: #ff6f00;
+  --bg-cream: #fdece4;
+  --text-color: #3a3a3a;
+}
+
+.custom-header {
+  background-color: var(--bg-cream);
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent-orange);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Nav Links */
+.nav-link-custom {
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link-custom:hover {
+  color: var(--primary-green);
+}
+
+.nav-link-custom::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--primary-green);
+  transition: width 0.3s;
+}
+
+.nav-link-custom:hover::after {
+  width: 100%;
+}
+
+
+/* Buttons */
+.btn-success {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+  font-weight: 500;
+  padding: 9px 50px;
+}
+
+.btn-success:hover {
+  background-color: #3c7e64;
+  border-color: #3c7e64;
+}
+
+/* Icons */
+.cursor-pointer {
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.cursor-pointer:hover {
+  color: var(--primary-green);
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 25px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: var(--accent-orange);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 4px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -4px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  background-color: var(--bg-cream);
+  border-top: 1px solid #ddd;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  
+  .nav-link-custom {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .btn-success {
+    padding: 5px 16px;
+  }
+}
