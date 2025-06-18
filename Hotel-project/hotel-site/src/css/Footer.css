@@ -1,0 +1,23 @@
+.footer-main {
+  background-color: #4c9a91;
+  color: #fffbe9;
+  position: relative;
+}
+
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-social-icons span {
+  font-size: 1.5rem;
+  color: #fffbe9;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social-icons span:hover {
+  transform: scale(1.2) rotate(5deg);
+  color: #ffde59;
+}

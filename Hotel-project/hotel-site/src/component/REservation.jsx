@@ -31,8 +31,8 @@ function REservation() {
     const hanssubmit = async (e) => {
         e.preventDefault();
 
-        seterror(""); // clear previous errors
-        setmsg("");   // clear previous success 
+        seterror("");
+        setmsg("");
 
         if (!formdata.name || !formdata.phone || !formdata.date || !formdata.time || !formdata.people) {
             seterror("All fields are required");
@@ -40,7 +40,7 @@ function REservation() {
         }
 
         try {
-            // Optional: Appwrite authentication logic
+
             await authentication.creatacount({
                 ...formdata,
                 people: String(formdata.people)
@@ -51,17 +51,16 @@ function REservation() {
                 formDataToSend.append(key, formdata[key]);
             }
 
-            // Submit to Google Apps Script, but catch CORS silently
             await fetch(googleUrl, {
                 method: "POST",
                 body: formDataToSend,
-                mode: "no-cors", // IMPORTANT: stops CORS error from crashing app
+                mode: "no-cors",
             });
 
-            // Show success (even though we can't confirm from response due to no-cors)
+
             setmsg("Reservation submitted successfully!");
 
-            // Clear form
+
             setformdata({
                 name: "",
                 phone: "",
@@ -72,7 +71,7 @@ function REservation() {
             });
 
         } catch (err) {
-            // Log full error in console for developer
+
             console.error("Reservation error:", err);
             seterror("Something went wrong. Try again.");
         }
@@ -80,81 +79,102 @@ function REservation() {
 
 
     return (
-        <Element name='reservation'>
+        <Element name='reservation' className='res-sec'>
             <div className="reservation-container App">
                 <h1>Reserve Your Table</h1>
-                <form onSubmit={hanssubmit} className="text-center reservation-form">
-                    <div>
-                        <label className='me-3' htmlFor="name">Enter Name :</label>
-                        <input
-                            type="text"
-                            name="name"
-                            id="name"
-                            onChange={handchange}
-                            value={formdata.name}
-                            placeholder="Enter Name Here"
-                        />
-                    </div>
-                    <div>
-                        <label className='me-3' htmlFor="mobile">Enter Mobile No :</label>
-                        <input
-                            type="tel"
-                            id="mobile"
-                            name="phone"
-                            onChange={handchange}
-                            value={formdata.phone}
-                            placeholder="Enter Number Here"
-                        />
-                    </div>
-                    <div>
-                        <label className='me-3' htmlFor="date">Enter your Date :</label>
-                        <input
-                            type="date"
-                            id="date"
-                            name="date"
-                            onChange={handchange}
-                            value={formdata.date}
-                        />
-                    </div>
-                    <div>
-                        <label className='me-3' htmlFor="tm">Enter Time :</label>
-                        <input
-                            type="time"
-                            id="tm"
-                            name="time"
-                            onChange={handchange}
-                            value={formdata.time}
-                        />
-                    </div>
-                    <div>
-                        <label className='me-3' htmlFor="count">Enter Persons :</label>
-                        <input
-                            type="text"
-                            id="count"
-                            name="people"
-                            onChange={handchange}
-                            value={formdata.people}
-                            placeholder="Number of People"
-                        />
-                    </div>
-                    <div>
-                        <label className='me-3' htmlFor="write">Your Special request :</label>
-                        <input
-                            type="text"
-                            id="write"
-                            name="wish"
-                            onChange={handchange}
-                            value={formdata.wish}
-                            placeholder="Enter your request"
-                        />
-                    </div>
-                    <div>
-                        <input type="submit" value="Reserve" />
+                <form onSubmit={hanssubmit} className="container reservation-form">
+                    <div className="row gy-4">
+                        <div className="col-12 col-md-6">
+                            <label htmlFor="name" className="form-label">Enter Name :</label>
+                            <input
+                                type="text"
+                                name="name" 
+                                id="name"
+                                onChange={handchange}
+                                value={formdata.name}
+                                className="form-control border-orange"
+                                placeholder="Enter Name Here"
+                            />
+                        </div>
+
+                        <div className="col-12 col-md-6">
+                            <label htmlFor="mobile" className="form-label">Enter Mobile No :</label>
+                            <input
+                                type="tel"
+                                id="mobile"
+                                name="phone"
+                                onChange={handchange}
+                                value={formdata.phone}
+                                className="form-control border-orange"
+                                placeholder="Enter Number Here"
+                            />
+                        </div>
+
+                        <div className="col-12 col-md-6">
+                            <label htmlFor="date" className="form-label">Enter your Date :</label>
+                            <input
+                                type="date"
+                                id="date"
+                                name="date"
+                                onChange={handchange}
+                                value={formdata.date}
+                                className="form-control border-orange"
+                            />
+                        </div>
+
+                        <div className="col-12 col-md-6">
+                            <label htmlFor="tm" className="form-label">Enter Time :</label>
+                            <input
+                                type="time"
+                                id="tm"
+                                name="time"
+                                onChange={handchange}
+                                value={formdata.time}
+                                className="form-control border-orange"
+                            />
+                        </div>
+
+                        <div className="col-12 col-md-6">
+                            <label htmlFor="count" className="form-label">Enter Persons :</label>
+                            <input
+                                type="text"
+                                id="count"
+                                name="people"
+                                onChange={handchange}
+                                value={formdata.people}
+                                className="form-control border-orange"
+                                placeholder="Number of People"
+                            />
+                        </div>
+
+                        <div className="col-12 col-md-6">
+                            <label htmlFor="write" className="form-label">Your Special request :</label>
+                            <input
+                                type="text"
+                                id="write"
+                                name="wish"
+                                onChange={handchange}
+                                value={formdata.wish}
+                                className="form-control border-orange"
+                                placeholder="Enter your request"
+                            />
+                        </div>
+
+                        <div className="col-12 text-center">
+                            <input
+                                type="submit"
+                                value="Reserve"
+                                className="btn btn-success px-5 mt-3"
+                            />
+                        </div>
                     </div>
                 </form>
+
+
                 {msg && <p className="success-message">{msg}</p>}
                 {error && <p className="error-message">{error}</p>}
             </div>
+
         </Element>
     );
 }

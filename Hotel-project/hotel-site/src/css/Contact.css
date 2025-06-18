@@ -1,0 +1,17 @@
+.contact-section {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.table td {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.95rem;
+}
+
+.ratio iframe {
+    border: none;
+}
+
+.contact{
+    background-color: #fbe9e7;
+
+}

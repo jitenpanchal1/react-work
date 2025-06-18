@@ -29,7 +29,7 @@ function Header() {
                     <Link to="ourfamous" smooth={true} duration={500}  offset={-80} className="nav-link-custom">Our famour</Link>
                     <Link to="event" smooth={true} duration={500} className="nav-link-custom">Our Event</Link>
                     <Link to="menu" smooth={true} duration={500} className="nav-link-custom">Menu</Link>
-                    <Link to="about" smooth={true} duration={500} className="nav-link-custom">About</Link>
+                    {/* <Link to="about" smooth={true} duration={500} className="nav-link-custom">About</Link> */}
                     <Link to="contact" smooth={true} duration={500} className="nav-link-custom">Contact Us</Link>
                 </nav>
 
@@ -56,10 +56,10 @@ function Header() {
                     <Link to="home" smooth={true} duration={500} offset={-500} onClick={closeMenu} className="nav-link-custom d-block py-2">Home</Link>
                     <Link to="ourfamous" smooth={true} duration={500} offset={-360} onClick={closeMenu} className="nav-link-custom d-block py-2">Our famour</Link>
                     <Link to="event" smooth={true} duration={500} onClick={closeMenu} className="nav-link-custom d-block py-2">Our Event</Link>
-                    <Link to="about" smooth={true} duration={500} onClick={closeMenu} className="nav-link-custom d-block py-2">About</Link>
+                    {/* <Link to="about" smooth={true} duration={500} onClick={closeMenu} className="nav-link-custom d-block py-2">About</Link> */}
                     {/* <Link to="shop" smooth={true} duration={500} onClick={closeMenu} className="nav-link-custom d-block py-2">Shop</Link> */}
                     <Link to="contact" smooth={true} duration={500} onClick={closeMenu} className="nav-link-custom d-block py-2">Contact Us</Link>
-                    <Link to="reservation" smooth={true} duration={500} onClick={closeMenu} className="btn btn-success w-100 mt-3">Reservation</Link>
+                    <Link to="reservation" smooth={true} duration={500} offset={-400} onClick={closeMenu} className="btn btn-success w-100 mt-3">Reservation</Link>
                 </div>
             )}
         </header>

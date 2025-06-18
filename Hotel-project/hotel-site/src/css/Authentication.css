@@ -1,24 +1,37 @@
 /* Reservation.css */
 
+.border-orange {
+    border: 1px solid #f97316 !important;
+    background-color: #fffdf9;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.res-sec{
+    background-color: #fbe9e7;
+}
+
+.border-orange:focus {
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+}
+
 .reservation-container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: #fff8f0;
+    background: #fbe9e7;
     border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-left: 6px solid #f97316;
+    border-right: 6px solid #f97316;
 }
 
 .reservation-container h1 {
+    color: #f97316;
+    font-weight: 700;
+    font-size: 1.8rem;
     text-align: center;
-    color: #333;
-    margin-bottom: 24px;
-    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .reservation-form {
-    /* margin: 50p; */
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -69,10 +82,6 @@
 }
 
 @media (max-width: 600px) {
-    .reservation-container {
-        margin: 20px;
-        padding: 20px;
-    }
 
     .reservation-form input[type="text"],
     .reservation-form input[type="tel"],
