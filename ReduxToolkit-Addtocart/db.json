@@ -1,0 +1,22 @@
+{
+    "product": [
+        {
+            "id": 1,
+            "name": "Ice-cream",
+            "price": 50,
+            "qty": 1,
+            "baseprice": 50,
+            "img": "https://naturalicecreams.in/wp-content/uploads/2023/11/500g_Tub-Label_Cherry-Berry_Lid-W.jpg",
+            "des": "Low suger, amul milk, good for health "
+        },
+        {
+            "id": 2,
+            "name": "Ice-corn",
+            "price": 20,
+            "qty": 1,
+            "baseprice": 20,
+            "img": "https://5.imimg.com/data5/SELLER/Default/2022/3/RR/SA/HP/9065743/new-product.jpeg",
+            "des": "Low suger, amul milk, good for health "
+        }
+    ]
+}
