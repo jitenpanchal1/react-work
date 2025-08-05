@@ -37,7 +37,6 @@ function Reduxtodolist() {
         setedtext("")
     }
 
-
     return (
         <>
             <div className='d-flex align-items-center justify-content-center h-100'>
@@ -61,7 +60,7 @@ function Reduxtodolist() {
                                     {edid === item.id ? (
                                         <>
                                             <div
-                                               className='p-1 m-0 w-100 p-0 rounded-1 d-flex align-items-center justify-content-between bg-info'>
+                                                className='p-1 m-0 w-100 p-0 rounded-1 d-flex align-items-center justify-content-between bg-info'>
                                                 <input
                                                     className=' w-50'
                                                     value={edtext}
@@ -88,8 +87,6 @@ function Reduxtodolist() {
                                                         onClick={() => dispatch(deleteTodo(item.id))}>Delete</button>
                                                 </div>
                                             </span>
-
-
                                         </>
                                     )}
                                 </MDBListGroupItem>

@@ -1,0 +1,67 @@
+{
+  "products": [
+    {
+      "id": "a71f",
+      "productname": "cup",
+      "qty": "1 set",
+      "price": "200 INR",
+      "image": {},
+      "imgpreview": "blob:http://localhost:5173/c423b0c3-e636-45ae-ac4e-3813d73175c7",
+      "userid": "pushpa"
+    },
+    {
+      "id": "6c9e",
+      "productname": "ball",
+      "qty": "1",
+      "price": "400",
+      "image": {},
+      "imgpreview": "blob:http://localhost:5173/ed67112a-ba0e-43b8-b47e-ba268232d710",
+      "userid": "raju"
+    },
+    {
+      "id": "60f6",
+      "productname": "white bord",
+      "qty": "1",
+      "price": "500",
+      "image": {},
+      "imgpreview": "blob:http://localhost:5173/fd299af4-f052-4afe-bee2-3a946872ee34",
+      "userid": "raju"
+    },
+    {
+      "id": "b3be",
+      "productname": "hairpin",
+      "qty": "2",
+      "price": "40",
+      "image": {},
+      "imgpreview": "blob:http://localhost:5173/8e7f8c83-0fd6-4fb6-8c83-edc730722223",
+      "userid": "kamal"
+    },
+    {
+      "id": "a1c4",
+      "productname": "sd",
+      "qty": "1",
+      "price": "233",
+      "image": {},
+      "imgpreview": "blob:http://localhost:5173/406fdaec-80df-4295-9e6b-321e3ad0e0d4",
+      "userid": "kamal"
+    },
+    {
+      "id": "c5d1",
+      "productname": "hyj",
+      "qty": "2",
+      "price": "236",
+      "image": {},
+      "imgpreview": "blob:http://localhost:5173/48fdeb30-e838-4eb9-88ce-7d138bd5f1bc",
+      "userid": "kamo"
+    },
+    {
+      "id": "10cb",
+      "productname": "wer",
+      "qty": "1",
+      "price": "123",
+      "image": {},
+      "imgpreview": "blob:http://localhost:5173/b63046cc-fe69-4ced-90e4-0c39cd939561",
+      "userid": "kamo"
+    }
+  ]
+}

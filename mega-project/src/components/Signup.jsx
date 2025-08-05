@@ -5,11 +5,15 @@ import { Link, useNavigate } from 'react-router';
 import { BasicButton, Input, Logo } from './Index';
 import { useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
+import './Login.css';
 
 function Signup() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const { register, handleSubmit } = useForm();
+    const {
+        register,
+        handleSubmit,
+        formState: { errors } } = useForm();
     const [error, setError] = useState('');
 
     const creat = async (data) => {
@@ -62,8 +66,16 @@ function Signup() {
                             type="text"
                             className="form-control rounded-3"
                             placeholder="Enter your name"
-                            {...register('name', { required: true })}
+                            {...register('name', {
+                                required: "name is required",
+                                pattern: {
+                                    message: 'name is required',
+                                },
+                            })}
                         />
+                        {errors.name && (
+                            <p className="field-error">{errors.name.message}</p>
+                        )}
                     </div>
 
                     <div className="mb-3">
@@ -73,14 +85,16 @@ function Signup() {
                             className="form-control rounded-3"
                             placeholder="you@example.com"
                             {...register('email', {
-                                required: true,
-                                validate: {
-                                    matchPattern: (value) =>
-                                        /^([\w.\-_]+)?\w+@[\w-_]+(\.\w+){1,}$/.test(value) ||
-                                        setError('Email is not valid'),
+                                required: 'Email is required',
+                                pattern: {
+                                    value: /^([\w.\-_]+)?\w+@[\w-_]+(\.\w+){1,}$/,
+                                    message: 'Invalid email format',
                                 },
                             })}
                         />
+                        {errors.email && (
+                            <p className="field-error">{errors.email.message}</p>
+                        )}
                     </div>
 
                     <div className="mb-4">
@@ -90,26 +104,20 @@ function Signup() {
                             className="form-control rounded-3"
                             placeholder="••••••••"
                             {...register('password', {
-                                required: true,
-                                validate: {
-                                    matchPattern: (value) =>
-                                        /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,64})/.test(value) ||
-                                        setError('Password must include A-Z, a-z, 0-9 and special char.'),
+                                required: 'Password is required',
+                                pattern: {
+                                    value:
+                                        /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,64})/,
+                                    message:
+                                        'Password must contain uppercase, lowercase, number, and special character',
                                 },
                             })}
                         />
-                    </div>
-                    {/* Error Message */}
-                    <div style={{ minHeight: '40px' }}>
-                        {error ? (
-                            <div className="alert alert-danger py-2 mb-3" role="alert">
-                                {error}
-                            </div>
-                        ) : (
-                            <div className="invisible">placeholder</div>
+                        {errors.password && (
+                            <p className="field-error">{errors.password.message}</p>
                         )}
                     </div>
-
+                    {/* Error Message */}
                     <div className="d-grid">
                         <BasicButton
                             type="submit"

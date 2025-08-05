@@ -14,7 +14,6 @@ import Home from './components/pages/Home.jsx'
 import Mypost from './components/pages/Mypost.jsx'
 
 const router = createBrowserRouter(
-
   [
     {
       path: "/",
@@ -82,5 +81,4 @@ createRoot(document.getElementById('root')).render(
   <Provider store={store}>
     <RouterProvider router={router} />
   </Provider >
-
 )

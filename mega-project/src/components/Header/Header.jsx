@@ -44,7 +44,6 @@ function Header() {
             slug: "/my-post",
             active: authStatus
         }
-
     ]
     return (
         <header>

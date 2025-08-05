@@ -118,7 +118,6 @@ function Postform({ post }) {
                             {...register("title", { required: true })}
                         />
                     </div>
-
                     <div className="col-md-6">
                         <Input
                             label="Slug:"
@@ -132,7 +131,6 @@ function Postform({ post }) {
                             }}
                         />
                     </div>
-
                     <div className="col-12">
                         <RTe
                             label="Content:"
@@ -141,7 +139,6 @@ function Postform({ post }) {
                             defaultValue={getValues("content")}
                         />
                     </div>
-
                     <div className="col-md-6">
                         <Input
                             label="Featured Image:"
@@ -151,7 +148,6 @@ function Postform({ post }) {
                             {...register("image", { required: !post })}
                         />
                     </div>
-
                     {post?.featuredImg && (
                         <div className="col-md-6 text-center">
                             <label className="form-label">Current Image:</label>
@@ -163,7 +159,6 @@ function Postform({ post }) {
                             />
                         </div>
                     )}
-
                     <div className="col-md-6">
                         <Select
                             label="Status:"
@@ -172,7 +167,6 @@ function Postform({ post }) {
                             {...register("status", { required: true })}
                         />
                     </div>
-
                     <div className="col-12 d-flex justify-content-end mt-4">
                         <BasicButton type="submit" className="btn btn-primary px-4">
                             {post ? "Update" : "Submit"}
